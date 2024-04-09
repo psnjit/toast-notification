@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f7edff;
+}
+
+.buttons{
+    margin: 50px;
+}
+
+.buttons button{
+    background: #333;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    width: 120px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#toastBox{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.toast{
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.toast i{
+    margin: 0 20px;
+    font-size: 35px;
+}
+
+.success i{
+    color: green;
+}
+
+.failure i{
+    color: red;
+}
+
+.invalid i{
+    color: orange;
+}
+
+.toast::after{
+    content: '';
+    position: absoulte;
+    width: 100%;
+    height: 5px;
+    left: 0 !important;
+    top: 0 !important;
+    background: green;
+    animation: anim 5s linear forward;
+}
+
+.failure::after{
+    background: red;
+}
+
+.invalid::after{
+    background: orange;
+}
+
+@keyframes anim{
+    100%{
+        width: 0;
+    }
+}
